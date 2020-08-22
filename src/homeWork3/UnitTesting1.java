@@ -6,13 +6,24 @@ import org.testng.annotations.Test;
 
 public class UnitTesting1 extends AmazonTestCase {
 
+    /**
+     * Testing Help Button
+     * @throws InterruptedException
+     * Author : Elhacen
+     */
     @Test
     public void testHelpButtonCheck() throws InterruptedException {
         helpButtonCheck();
-        Thread.sleep(1000);
+        Thread.sleep(8000);
         String actualText = driver.findElement(By.xpath(helpActualText)).getText();
         Assert.assertEquals(actualText, helpexpectedText);
     }
+
+    /**
+     * Testing Menu Button
+     * @throws InterruptedException
+     * Author : Elhacen
+     */
     @Test
     public void testMenuButtonCheck() throws InterruptedException {
         menuButtonCheck();
@@ -21,6 +32,12 @@ public class UnitTesting1 extends AmazonTestCase {
         Assert.assertEquals(actualText, menuexpectedText);
 
     }
+
+    /**
+     * Testing Subscribe & Save Button
+     * @throws InterruptedException
+     * Author : Elhacen
+     */
     @Test
     public void testSubscribeAndSaveButtonCheck() throws InterruptedException {
 
@@ -29,6 +46,12 @@ public class UnitTesting1 extends AmazonTestCase {
         String actualText = driver.findElement(By.xpath(subscribeActualText)).getText();
         Assert.assertEquals(actualText, subscribeexpectedText);
     }
+
+    /**
+     * Testing Account Button
+     * @throws InterruptedException
+     * Author : Elhacen
+     */
     @Test
     public void testYourAccountButtonCheck() throws InterruptedException {
         yourAccountButtonCheck();
@@ -36,6 +59,12 @@ public class UnitTesting1 extends AmazonTestCase {
         String actualText = driver.findElement(By.xpath(yourAccountActualText)).getText();
         Assert.assertEquals(actualText, yourAccountexpectedText);
     }
+
+    /**
+     * Testing FoundItOnAmazon Button
+     * @throws InterruptedException
+     * Author : Elhacen
+     */
     @Test
     public void testFoundItOnAmazonButtonCheck() throws InterruptedException {
         foundItOnAmazonButtonCheck();
